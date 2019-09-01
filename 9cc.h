@@ -5,6 +5,10 @@ typedef enum
     ND_SUB, // -
     ND_MUL, // *
     ND_DIV, // /
+    ND_EQ,  // ==
+    ND_NE,  // !=
+    ND_LT,  // <
+    ND_LE,  // <=
     ND_NUM, // 整数
 } NodeKind;
 
@@ -35,6 +39,5 @@ struct Token
     Token *next;    // 次の入力トークン
     int val;        // kindがTK_NUMの場合、その数値
     char *str;      // トークン文字列
+    int len;
 };
-
-
